@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Draggable from "react-draggable";
+import Toolbar from "./components/Toolbar";
 
 interface Widgets {
   id: string;
@@ -54,8 +55,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
-      <button onClick={addNote}>Add Note</button>
+    <div className="relative h-screen w-full">
+      <Toolbar />
       <div className="relative h-screen w-full overflow-hidden">
         {widgets.map((widget) => (
           <Draggable
